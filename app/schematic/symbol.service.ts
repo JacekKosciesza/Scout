@@ -12,6 +12,7 @@ export class SymbolService {
     getSymbols() {
         return this._http.get('app/api/symbols.json')
             .map((response: Response) => <Symbol[]>response.json().data)
+            .do(data => console.log(data))
             .catch(this.handleError);
     }
     
