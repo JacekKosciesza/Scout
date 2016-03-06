@@ -1,5 +1,5 @@
   import { bootstrap } from 'angular2/platform/browser';
-  import { ScoutEDA } from './eda.component';
+  import { ScoutEDA } from './scout-eda';
 
   bootstrap(ScoutEDA)
     .then(success => console.log(`Bootstrap success`))

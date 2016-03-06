@@ -1,0 +1,15 @@
+Functionalities & entities:
+- auto-router
+- corner
+- design-rule-constraint
+- differential-pair
+- footprint
+- footprint-editor
+- layer
+- meanders
+- pad
+- pcb-editor
+- pin
+- trace
+- track
+- via

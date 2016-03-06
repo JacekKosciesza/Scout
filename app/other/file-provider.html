@@ -1,0 +1,10 @@
+<h1>File Reader</h1>
+<div id="drop_zone" (dragover)="onDragOver($event)" (drop)="onDrop($event)">Drop files here</div>
+<input type="file" name="files[]" multiple (change)="onFileSelect($event)" />
+<ul>
+    <li *ngFor="#file of files">
+        <strong>{{file.name}}</strong> ({{file.type}}) - {{file.size}} bytes, last modified: {{file.lastModifiedDate.toLocaleDateString()}}
+        <button (click)="readFile(file)">Read</button>
+    </li>
+</ul>
+<div>{{content}}</div>

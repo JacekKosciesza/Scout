@@ -1,0 +1,15 @@
+Functionalities & entities:
+- bill-of-materials
+- bus
+- component
+- electrical-rules-check
+- junction
+- label
+- net
+- netlist-exporter
+- pin
+- schematic-designer
+- symbol
+- symbol-editor
+- symbol-library
+- wire

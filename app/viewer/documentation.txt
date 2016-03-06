@@ -1,0 +1,4 @@
+Functionalities & entities:
+- board
+- viewer-2d
+- viewer-3d

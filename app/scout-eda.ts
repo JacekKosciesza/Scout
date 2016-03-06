@@ -1,11 +1,10 @@
 import { Component } from 'angular2/core';
+import { FileProvider } from './other/file-provider';
 
 @Component({
   selector: 'scout-eda',
-  template: `
-    <h1>{{codename}}</h1>
-    <small>Web EDA (Electronic Design Automation)</small>
-  `
+  templateUrl: 'app/scout-eda.html',
+  directives: [FileProvider]
 })
 export class ScoutEDA {
   codename = "Scout";
