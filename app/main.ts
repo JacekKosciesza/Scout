@@ -2,6 +2,6 @@
   import { ScoutEDA } from './scout-eda';
 
   bootstrap(ScoutEDA)
-    .then(success => console.log(`Bootstrap success`))
+    .then(success => console.log(`Scout EDA`))
     .catch(error => console.log(error));
 

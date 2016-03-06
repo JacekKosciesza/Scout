@@ -1,5 +1,7 @@
-import { Symbol, Definition, F0, FN, Draw, Arc, Circle, Polyline, Rectangle, Text, Pin, ShapeFactory, Shape } from './symbol'
+import { Injectable } from 'angular2/core';
+import { Symbol, Definition, F0, FN, ShapeFactory, Shape } from './symbol'
 
+@Injectable()
 export class Parser {
     private symbols: Array<Symbol> = [];
     
@@ -15,7 +17,8 @@ export class Parser {
             let parameters = line.split(' ')
             let commend = parameters[0];
 
-            // TODO: use factory pattern           
+            // TODO: use factory pattern
+            // TODO: finish parser
             switch (commend)
             {
                 case 'DEF':
@@ -52,7 +55,7 @@ export class Parser {
             }
         }
         
-        // console.log(this.symbols);
+        console.log(this.symbols);
         return this.symbols;
     }
     

@@ -1,4 +1,6 @@
-<h1>{{codename}}</h1>
+<h1>{{codename | slug}}</h1>
 <small>Web EDA (Electronic Design Automation)</small>
-<file-provider></file-provider>
-<schematic-canvas></schematic-canvas>
+<file-provider (onFileContentReady)="onFileContentReady($event)"></file-provider>
+<schematic-canvas [symbols]="symbols"></schematic-canvas>
+<symbol-library></symbol-library>
+<!--<ng-content select="footer"></ng-content>-->

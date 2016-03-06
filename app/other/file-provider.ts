@@ -1,5 +1,4 @@
-import { Component } from 'angular2/core';
-import { Parser } from '../schematic/parser'; // TODO: move it from here
+import { Component, Output, EventEmitter } from 'angular2/core';
 
 @Component({
   selector: 'file-provider',
@@ -7,6 +6,7 @@ import { Parser } from '../schematic/parser'; // TODO: move it from here
   styleUrls: ['app/other/file-provider.css']
 })
 export class FileProvider {
+    @Output() onFileContentReady = new EventEmitter<string>();
     public files:File[] = [];
     public content:string;
     
@@ -40,9 +40,7 @@ export class FileProvider {
         let reader = new FileReader();
         reader.onload = (event) => {
            this.content = event.target.result;
-           // TODO: move it from here 
-           var parser = new Parser();
-           var symbols = parser.GetSymbols(this.content);
+           this.onFileContentReady.emit(this.content);
         };
         reader.readAsText(file, "UTF-8");
     }

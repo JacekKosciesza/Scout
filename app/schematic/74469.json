@@ -1,0 +1,23 @@
+{
+    "DEF": {
+        "name": "74469",
+        "reference": "U",
+        "unused": "0",
+        "text_offset": "40",
+        "draw_pinnumber": "Y",
+        "draw_pinname": "Y",
+        "unit_count": "1",
+        "units_locked": "F",
+        "option_flag": "N"
+    },
+    "F0": {
+        "reference": "\"U\"",
+        "posx": "todo",
+        "posy": "todo",
+        "text_size": "todo",
+        "text_orient": "todo",
+        "visibility": "todo",
+        "htext_justify": "todo",
+        "vtext_justify": "todo"
+    }
+}

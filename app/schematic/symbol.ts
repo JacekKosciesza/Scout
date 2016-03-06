@@ -1,3 +1,4 @@
+/// <reference path="../typings/pixi.js.d.ts"/>
 // https://github.com/KiCad/kicad-library/blob/master/library/74xx.lib
 // https://easyeda.com/component/74469-MR3Ddbxus
 // http://www.compuphase.com/electronics/LibraryFileFormats.pdf
@@ -88,7 +89,7 @@ export class ShapeFactory {
 }
 
 export class Shape {
-    public draw() {
+    public draw(graphics: PIXI.Graphics) {
         console.log(`Drawing ${typeof this}`);
     }
 }
@@ -171,6 +172,13 @@ export class Rectangle extends Shape {
         super();
         [,this.startx, this.starty, this.endx, this.endy, this.unit, this.convert, this.thickness, this.fill] = parameters;        
         // console.log(this);
+    }
+    
+    public draw(graphics: PIXI.Graphics) {
+        console.log(`Drawing rectangle`);
+        graphics.beginFill(0xFFFFFF);
+        graphics.lineStyle(2, 0xFF0000);
+        graphics.drawRect(this.startx, this.starty, this.endx, this.endy);
     }
 }
 
