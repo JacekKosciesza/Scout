@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <script>document.write('<base href="' + document.location + '" />');</script>
-
+<head lang="en">
+  <!--<script>document.write('<base href="' + document.location + '" />');</script>-->
+  <base href="/" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
+  <!-- 1. Load libraries -->
   <!-- IE required polyfills, in this exact order -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.1/es6-shim.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
@@ -24,6 +30,7 @@
   <!-- PixiJS -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.9/pixi.min.js"></script>
   
+  <!-- 2. Configure SystemJS -->
   <script>
       System.config({
         transpiler: 'typescript', 
@@ -39,10 +46,13 @@
 </head>
 
 <body>
+  <!-- 3. Display the application -->
   <scout-eda>
       Loading Scout EDA...
       <footer>Scout EDA</footer>
   </scout-eda>
+  <!-- jQuery first, then Bootstrap JS. -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 import { Observable } from 'rxjs/Rx';
 
-import { Symbol } from 'symbol';
+import { Symbol } from './symbol';
 import { SymbolService } from './symbol.service';
 
 @Component({
