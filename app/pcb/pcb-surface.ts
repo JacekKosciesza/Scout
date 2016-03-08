@@ -8,12 +8,20 @@ import { Component, AfterViewInit } from 'angular2/core';
 export class PCBSurface implements AfterViewInit {
      ngAfterViewInit() {
         var s = Snap("#svg");
-        var bigCircle = s.circle(150, 150, 100);
-        bigCircle.attr({
-            fill: '#bada55',
-            stroke: '#000',
-            strokeWidth: 5
-        })
-        bigCircle.drag();
+        var t = s.text(150, 150, ["S", "cout"]);
+        t.attr({fill: "#A01C34", "font-size": "60px", "font-family": "Helvetica"});
+        t.selectAll("tspan:nth-child(2)").attr({
+            fill: "#434343",
+        });        
+        var c1 = s.circle(184, 114, 5);
+        var c2 = s.circle(157, 142, 5);
+        var circleAttr = {fill: "#FFFFFF", stroke: "#A01C34", strokeWidth: 4}; 
+        c1.attr(circleAttr);
+        c2.attr(circleAttr);
+        var logo = s.group(t, c1, c2);
+        logo.drag();
+        
+        
+        //bigCircle.drag();
      }
 }
