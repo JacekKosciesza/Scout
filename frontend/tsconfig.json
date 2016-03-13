@@ -7,7 +7,18 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false
+    
+    // Nicer looking errors, including the source line
+    "pretty": true,
+    
+    // static analysis options
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,    
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+    
+    
   },
   "exclude": [
     "node_modules",

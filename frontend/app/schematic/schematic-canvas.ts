@@ -1,6 +1,6 @@
 /// <reference path="../typings/pixi.js.d.ts"/>
 
-import { Component, Input, AfterViewInit } from 'angular2/core';
+import { Component, Input, AfterViewInit, SimpleChange } from 'angular2/core';
 import { Symbol } from './schematic/symbol';
 
 @Component({
@@ -35,8 +35,8 @@ export class SchematicCanvas implements AfterViewInit {
         this.renderer.render(this.stage);
     }
     
-    ngOnChanges() {
-        //console.log('ngOnChanges');
+    ngOnChanges(changes: {[key: string]: SimpleChange}) {
+        console.log(changes);
         for (let symbol of this.symbols) {
             for (let shape of symbol.Shapes) {
                 shape.draw(this.graphics);

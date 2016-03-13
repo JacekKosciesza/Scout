@@ -1,0 +1,3 @@
+https://angular.io/docs/ts/latest/guide/testing.html
+
+npm install jasmine-core --save-dev --save-exact

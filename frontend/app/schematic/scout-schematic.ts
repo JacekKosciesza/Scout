@@ -7,11 +7,12 @@ import { Parser } from './parser';
 import { Symbol } from './symbol';
 import { SymbolLibrary } from './symbol-library.component';
 import { Slug } from '../pipes/slug';
+import { SymbolGeneralSettings } from './library/symbol-general-settings.component';
 
 @Component({
     selector: 'scout-schematic',
     templateUrl: 'app/schematic/scout-schematic.html',
-    directives: [FileProvider, SchematicCanvas, SymbolLibrary],
+    directives: [FileProvider, SchematicCanvas, SymbolLibrary, SymbolGeneralSettings],
     providers: [HTTP_PROVIDERS, Parser],
     pipes: [Slug]
 })
