@@ -1,3 +1,6 @@
+<h1>Symbols library</h1>
+<p><i>Fetches when typing stops</i></p>
+ <input #term (keyup)="search(term.value)"/>
 <ul>
-    <li *ngFor="#symbol of symbols | async">*</li>
+    <li *ngFor="#symbol of symbols | async">{{symbol.name}}</li>
 </ul>

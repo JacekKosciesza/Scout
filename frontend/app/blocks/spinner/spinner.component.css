@@ -1,0 +1,10 @@
+.spinner {
+    position: absolute;left: 46%;top: 12%;
+    display: none;
+    font-size: x-large;
+    color: deeppink;
+}
+
+.is-active {
+    display: block;
+}

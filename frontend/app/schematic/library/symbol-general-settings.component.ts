@@ -1,4 +1,4 @@
-import {Component, Optional} from 'angular2/core';
+import {Component, Optional, ViewEncapsulation} from 'angular2/core';
 import {NgForm} from 'angular2/common';
 import {SymbolSettings} from './symbol-settings';
 import {Logger} from '../../other/logger.ts'
@@ -6,7 +6,8 @@ import {Logger} from '../../other/logger.ts'
 @Component({
   selector: 'symbol-general-settings',
   templateUrl: './app/schematic/library/symbol-general-settings.component.html',
-  styleUrls: ['./app/schematic/library/symbol-general-settings.component.css']
+  styleUrls: ['./app/schematic/library/symbol-general-settings.component.css'],
+  encapsulation: ViewEncapsulation.None // {None, Emulated, Native}
 })
 export class SymbolGeneralSettings {       
     active = true;

@@ -15,6 +15,7 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,    
     "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors":true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
     

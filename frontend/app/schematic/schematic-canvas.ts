@@ -37,6 +37,16 @@ export class SchematicCanvas implements AfterViewInit {
     
     ngOnChanges(changes: {[key: string]: SimpleChange}) {
         console.log(changes);
+        for (let propName in changes) {
+            if (propName === 'symbols') {
+                this.refresh();
+            } else {
+                console.log(`${propName} initialized`)
+            }
+        }        
+    }
+    
+    refresh() {
         for (let symbol of this.symbols) {
             for (let shape of symbol.Shapes) {
                 shape.draw(this.graphics);

@@ -1,5 +1,4 @@
 import { Component } from 'angular2/core';
-import { HTTP_PROVIDERS } from 'angular2/http';
 
 import { FileProvider } from '../other/file-provider';
 import { SchematicCanvas } from './schematic-canvas';
@@ -13,7 +12,7 @@ import { SymbolGeneralSettings } from './library/symbol-general-settings.compone
     selector: 'scout-schematic',
     templateUrl: 'app/schematic/scout-schematic.html',
     directives: [FileProvider, SchematicCanvas, SymbolLibrary, SymbolGeneralSettings],
-    providers: [HTTP_PROVIDERS, Parser],
+    providers: [Parser],
     pipes: [Slug]
 })
 export class ScoutSchematic {

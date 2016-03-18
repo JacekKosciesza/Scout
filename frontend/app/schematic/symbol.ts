@@ -4,10 +4,11 @@
 // http://www.compuphase.com/electronics/LibraryFileFormats.pdf
 // https://github.com/KiCad/kicad-library-utils/blob/master/schlib/schlib.py
 
-export class Symbol {
+export class Symbol {    
     // private Name: string;
     // private Reference: string;
     // private Pins: Array<Pin>;
+    public id: number;
     
     public Definition: Definition;
     public Fields: Array<Field> = [];
