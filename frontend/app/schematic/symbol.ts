@@ -1,4 +1,4 @@
-/// <reference path="../typings/pixi.js.d.ts"/>
+/// <reference path="../../typings/browser/ambient/pixi.js/index.d.ts" />
 // https://github.com/KiCad/kicad-library/blob/master/library/74xx.lib
 // https://easyeda.com/component/74469-MR3Ddbxus
 // http://www.compuphase.com/electronics/LibraryFileFormats.pdf
@@ -69,23 +69,19 @@ export class ShapeFactory {
         switch(commend) {
             case 'A':
                 return new Arc(parameters);
-                break;
             case 'C':
                 return new Circle(parameters);
-                break;
             case 'P':
                 return new Polyline(parameters);
-                break;
             case 'S':
                 return new Rectangle(parameters);
-                break;
             case 'T':
                 return new Text(parameters);
-                break;
             case 'X':
                 return new Pin(parameters);
-                break;
-        }
+            default:
+                return new Shape();
+        }        
     }
 }
 

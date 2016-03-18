@@ -1,7 +1,7 @@
-/// <reference path="../typings/pixi.js.d.ts"/>
+/// <reference path="../../typings/browser/ambient/pixi.js/index.d.ts" />
 
 import { Component, Input, AfterViewInit, SimpleChange } from 'angular2/core';
-import { Symbol } from './schematic/symbol';
+import { Symbol } from './symbol';
 
 @Component({
     selector: 'schematic-canvas',

@@ -1,3 +1,5 @@
+/// <reference path="../../node_modules/rxjs/Observable.d.ts" />
+
 import {Injectable} from 'angular2/core';
 import {Http, Response, Headers, RequestOptions} from 'angular2/http';
 import {Observable} from 'rxjs/Rx';
@@ -32,10 +34,12 @@ export class SymbolService {
     
     // Read
     getSymbols() {
+        this._spinnerService.show();
         return this._http.get(symbolsUrl)
             .map((response: Response) => <Symbol[]>response.json().data)
             .do(data => console.log(data)) // TODO: comment it out before going to production!
-            .catch(this.handleError);
+            .catch(this.handleError)
+            .finally(() => this._spinnerService.hide());
     }
     
     // Read
@@ -71,7 +75,7 @@ export class SymbolService {
             .finally(() => this._spinnerService.hide());
   }
     
-    handleError(error: Response) {
+    handleError(error: Response): any { // : ErrorObservable
         // TODO: send the error to some remote logging infrastructure instead of just logging it to the console        
         console.error(error);
         return Observable.throw(error.json().error || 'Server error');

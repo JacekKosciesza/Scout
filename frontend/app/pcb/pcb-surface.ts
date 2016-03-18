@@ -1,3 +1,5 @@
+/// <reference path="../../typings/browser/ambient/snapsvg/index.d.ts" />
+
 import { Component, AfterViewInit } from 'angular2/core';
 
 @Component({

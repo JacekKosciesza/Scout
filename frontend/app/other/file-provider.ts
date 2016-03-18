@@ -10,13 +10,13 @@ export class FileProvider {
     public files:File[] = [];
     public content:string;
     
-    public onFileSelect(event) {
+    public onFileSelect(event: any) {
         this.files = this._ExtractFileList(event.target.files);
     }
     
     private _ExtractFileList(fileList:FileList) {
-        var files = [];
-        for (var i = 0, f; f = fileList[i]; i++) {
+        var files: File[] = [];
+        for (var i = 0, f:File; f = fileList[i]; i++) {
             //if (!f.type.match('image.*')) {
                 files.push(f);
             //}
@@ -24,21 +24,21 @@ export class FileProvider {
         return files;
     }
     
-    public onDragOver(event) {
+    public onDragOver(event: DragEvent) {
         event.stopPropagation();
         event.preventDefault();
         event.dataTransfer.dropEffect = 'copy';
     }
     
-    public onDrop(event) {
+    public onDrop(event: DragEvent) {
         event.stopPropagation();
         event.preventDefault();
         this.files = this._ExtractFileList(event.dataTransfer.files);
     }
     
-    public readFile(file) {
+    public readFile(file: File) {
         let reader = new FileReader();
-        reader.onload = (event) => {
+        reader.onload = (event: any ) => {
            this.content = event.target.result;
            this.onFileContentReady.emit(this.content);
         };

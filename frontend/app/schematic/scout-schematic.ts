@@ -5,7 +5,7 @@ import { SchematicCanvas } from './schematic-canvas';
 import { Parser } from './parser';
 import { Symbol } from './symbol';
 import { SymbolLibrary } from './symbol-library.component';
-import { Slug } from '../pipes/slug';
+import { SlugPipe } from '../pipes/slug.pipe';
 import { SymbolGeneralSettings } from './library/symbol-general-settings.component';
 
 @Component({
@@ -13,7 +13,7 @@ import { SymbolGeneralSettings } from './library/symbol-general-settings.compone
     templateUrl: 'app/schematic/scout-schematic.html',
     directives: [FileProvider, SchematicCanvas, SymbolLibrary, SymbolGeneralSettings],
     providers: [Parser],
-    pipes: [Slug]
+    pipes: [SlugPipe]
 })
 export class ScoutSchematic {
     codename: string = 'Scout EDA';
