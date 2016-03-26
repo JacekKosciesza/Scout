@@ -1,3 +1,9 @@
+<md-toolbar color="primary">
+  <span>Scout</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+  <span>EDA</span>
+</md-toolbar>
 <header>
     <nav class="navbar navbar-light bg-faded">
         <a class="navbar-brand" href="/">Scout EDA</a>
@@ -8,11 +14,14 @@
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['PCB']">PCB</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['Test']">Test</a>
+            </li>
         </ul>
     </nav>
 </header>
 <main class="container-fluid">
-    <router-outlet></router-outlet>
+    <router-outlet></router-outlet> <!--everyting except this is app shell-->
 </main>
 <loading-spinner></loading-spinner>
 <toast></toast>

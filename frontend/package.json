@@ -1,6 +1,16 @@
 {
   "name": "scout-eda",
   "version": "0.1.0",
+  "description": "Scout EDA",
+  "authors": [
+    "Jacek Kościesza"
+  ],
+  "license": "",
+  "homepage": "https://scout-eda.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JacekKosciesza/Scout"
+  },
   "scripts": {
     "build_notworking": "rm -rf dist && tsc -p app",
     "build": "tsc -p app",
@@ -9,7 +19,6 @@
     "test": "karma start karma.conf.js",
     "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
     "coverage": "http-server -c-1 -o -p 9875 ./coverage",
-    
     "start_old": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
@@ -17,8 +26,15 @@
     "typings": "typings",
     "postinstall": "typings install"
   },
-  "license": "",
   "dependencies": {
+    "@angular2-material/button": "^2.0.0-alpha.1",
+    "@angular2-material/card": "^2.0.0-alpha.1",
+    "@angular2-material/checkbox": "^2.0.0-alpha.1",
+    "@angular2-material/core": "^2.0.0-alpha.1",
+    "@angular2-material/progress-circle": "^2.0.0-alpha.1",
+    "@angular2-material/radio": "^2.0.0-alpha.1",
+    "@angular2-material/sidenav": "^2.0.0-alpha.1",
+    "@angular2-material/toolbar": "^2.0.0-alpha.1",
     "a2-in-memory-web-api": "^0.1.9",
     "angular2": "2.0.0-beta.9",
     "es6-promise": "^3.0.2",
@@ -30,7 +46,14 @@
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
+    "gulp": "^3.9.1",
     "gulp-cli": "git://github.com/gulpjs/gulp-cli.git#4.0",
+    "gulp-if": "^2.0.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-print": "^2.0.1",
+    "gulp-tslint": "^4.3.3",
+    "gulp-tslint-stylish": "^1.1.1",
+    "gulp-util": "^3.0.7",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
@@ -40,7 +63,9 @@
     "lite-server": "^2.1.0",
     "remap-istanbul": "^0.5.1",
     "systemjs": "^0.19.24",
+    "tslint": "^3.6.0",
     "typescript": "^1.8.9",
-    "typings": "^0.7.5"
+    "typings": "^0.7.5",
+    "yargs": "^4.3.1"
   }
 }

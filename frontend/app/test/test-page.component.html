@@ -1,0 +1,114 @@
+<top-menu>
+    <ul class="main-menu">
+    <li class="active-menu"> File
+      <ul style="position: absolute; top: 375px; left: 18px; z-index: 100; display: block;">
+        <li class="submenu"> New
+          <ul>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Document</a></li>
+            <li><a href="#">Client</a></li>
+          </ul>
+        </li>
+        <li class="separator"></li>
+        <li class="icon save"><a href="#">Save<span>Ctrl+S</span></a></li>
+        <li class="separator"></li>
+        <li class="disabled"><a href="#">Import</a></li>
+        <li>Export</li>
+        <li class="separator"></li>
+        <li class="icon print"><a href="#">Print<span>Ctrl+P</span></a></li>
+        <li class="separator"></li>
+        <li>Logout</li>
+      </ul>
+    </li>
+    <li> View
+      <ul>
+        <li class="submenu">Documents
+          <ul>
+            <li>All</li>
+            <li class="separator"></li>
+            <li>Unfinished</li>
+            <li>Closed</li>
+          </ul>
+        </li>
+        <li><a href="#">Products</a></li>
+        <li class="separator"></li>
+        <li class="submenu"> First level
+          <ul>
+            <li class="submenu"> Second level
+              <ul>
+                <li> Third level menu item </li>
+                <li class="submenu"> Third level
+                  <ul>
+                    <li> Forth level menu item 1 </li>
+                    <li> Forth level menu item 2 </li>
+                  </ul>
+                </li>
+                <li class="separator"></li>
+                <li>Another third level menu item</li>
+              </ul>
+            </li>
+            <li> Items will make menus stretch as needed </li>
+            <li class="separator"></li>
+            <li> Another menu item </li>
+          </ul>
+        </li>
+        <li class="separator"></li>
+        <li class="submenu">Reports
+          <ul>
+            <li>Sell history</li>
+            <li>Clients history</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li> Settings
+      <ul>
+        <li> Style configurator </li>
+        <li class="separator"></li>
+        <li class="submenu"> Account
+          <ul>
+            <li>Company data</li>
+            <li>Personal data</li>
+          </ul>
+        </li>
+        <li class="separator"></li>
+        <li> Options </li>
+      </ul>
+    </li>
+    <li> Help
+      <ul>
+        <li>Index</li>
+        <li class="separator"></li>
+        <li>Upgrade account</li>
+        <li>Registration</li>
+        <li class="separator"></li>
+        <li>Contact us</li>
+      </ul>
+    </li>
+  </ul>
+</top-menu>
+<button md-raised-button color="primary">PRIMARY</button>
+<md-checkbox [checked]="true">Are you in?</md-checkbox>
+<md-card>
+   Basic card.
+</md-card>
+<md-progress-circle mode="determinate" value="79" color="accent"></md-progress-circle>
+<md-progress-circle mode="indeterminate" color="warn"></md-progress-circle>
+<md-spinner></md-spinner>
+<md-radio-group>
+  <md-radio-button value="option_1">1</md-radio-button>
+  <md-radio-button value="option_2">2</md-radio-button>
+</md-radio-group>
+<md-sidenav-layout>
+    <md-sidenav #start (open)="mybutton.focus()">
+      Start Sidenav.
+      <br>
+      <button md-button #mybutton (click)="start.close()">Close</button>
+    </md-sidenav>
+    <md-sidenav #end align="end">
+      End Sidenav.
+      <button md-button (click)="end.close()">Close</button>
+    </md-sidenav>
+
+    My regular content. This will be moved into the proper DOM at runtime.
+  </md-sidenav-layout>

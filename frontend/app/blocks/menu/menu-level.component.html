@@ -1,0 +1,5 @@
+<ul [class.main-menu]="level === 1" [style.display]="display">
+    <li *ngFor="#menuItem of menuItems" (click)="select(menuItem)" [class.active-menu]="menuItem.active" [class.submenu]="menuItem.submenuItems && level !== 1">{{menuItem.label}} [{{level}}]
+        <menu-level [menuItems]="menuItem.submenuItems" [level]="level+1" [active]="menuItem.active"></menu-level>
+    </li>
+</ul>

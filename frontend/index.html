@@ -10,6 +10,8 @@
   
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- 1. Load libraries -->
   <!-- IE required polyfills, in this exact order -->
@@ -36,10 +38,61 @@
   <script>
       System.config({
         transpiler: 'typescript', 
-        typescriptOptions: { emitDecoratorMetadata: true }, 
+        typescriptOptions: { emitDecoratorMetadata: true },
         packages: {
           'api': {defaultExtension: 'ts'}, 
-          'app': {defaultExtension: 'ts'} 
+          'app': {defaultExtension: 'ts'},
+          '@angular2-material/core': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'core.js'
+          },
+          '@angular2-material/checkbox': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'checkbox.js'
+          },
+          '@angular2-material/toolbar': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'toolbar.js'
+          },
+          '@angular2-material/button': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'button.js'
+          },
+          '@angular2-material/card': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'card.js'
+          },
+          '@angular2-material/progress-circle': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'progress-circle.js'
+          },
+          '@angular2-material/radio': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'radio.js'
+          },
+          '@angular2-material/sidenav': {
+            format: 'cjs',
+            defaultExtension: 'js',
+            main: 'sidenav.js'
+          },
+        },
+        defaultJSExtensions: false,
+        map: {
+          '@angular2-material/core': 'node_modules/@angular2-material/core',
+          '@angular2-material/checkbox': 'node_modules/@angular2-material/checkbox',
+          '@angular2-material/button': 'node_modules/@angular2-material/button',
+          '@angular2-material/toolbar': 'node_modules/@angular2-material/toolbar',
+          '@angular2-material/card': 'node_modules/@angular2-material/card',
+          '@angular2-material/progress-circle': 'node_modules/@angular2-material/progress-circle',
+          '@angular2-material/radio': 'node_modules/@angular2-material/radio',
+          '@angular2-material/sidenav': 'node_modules/@angular2-material/sidenav',
         } 
       });
     System.import('app/main').then(null, console.error.bind(console));
